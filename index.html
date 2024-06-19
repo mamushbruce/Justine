@@ -1,98 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flip-card memory game.</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/icon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/icon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link rel="stylesheet" type="text/css" href="./reset.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./prefixfree.min.js" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/icons/icon-96x96.png" />
+    <link rel="apple-mobile-web-app-status-bar" content="#c0392b" />
+    <meta name="theme-color" content="#00B16A" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Flip-card memory game.</title>
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-  <link rel="stylesheet" type="text/css" href="./reset.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" type="text/css" href="./prefixfree.min.js">
-</head>
+  <body>
+    <!-- partial:index.partial.html -->
 
-<body>
-  <!-- partial:index.partial.html -->
-  <!--
-README!
+    <div id="g"></div>
 
-GAME INSRUCTIONS:
-
-p    - pause
-ESC  - abandon game
-
-Click the big P to choose one of three levels:
-- Casual
-- Medium
-- Hard
-
-The game will save your stats locally, via localStorage.
-Click the F to see your stats.
-
-Click I for these intructions.
-
-Flip is a timed card memory game. When starting a level, there's a red bar on top of the screen that shows how much time you have left.
-Click the green cards to see what symbol they uncover and try to find the matching symbol underneath the other cards.
-Uncover two matching symbols in a row to eliminate them from the game.
-Eliminate all cards as fast as you can to win the game. Have fun FLIPing!
--->
-
-
-  <div id="g"></div>
-
-  <div class="logo">
-    <p class="info">I know, YOU don't understand, Flip "P" to get started!</p>
-    <div class="card left">
-      <div class="flipper">
-        <div class="f c1">F</div>
-        <div class="b contentbox" id="stats">
-          <div class="padded">
-            <h2>Figures</h2>
-            Looks like you haven't FLIPped yet.
-            <a href="javascript:;" class="playnow">Play now</a>
+    <div class="logo">
+      <p class="info">
+        I know, YOU don't understand it, Flip "P" to get started!
+      </p>
+      <div class="card left">
+        <div class="flipper">
+          <div class="f c1">F</div>
+          <div class="b contentbox" id="stats">
+            <div class="padded">
+              <h2>Figures</h2>
+              Looks like you haven't FLIPped yet.
+              <a href="javascript:;" class="playnow">Play now</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card active twist">
-      <div class="flipper">
-        <div class="b f">
-          <div class="c2">L</div>
-        </div>
-      </div>
-    </div>
-    <div class="card left">
-      <div class="flipper instra">
-        <div class="f c3">I</div>
-        <div class="b contentbox instructions">
-          <div class="padded">
-            <h2>Instructions</h2>
-            <!-- <p>Press [p] to pause, or [ESC] to abandon game.</p> -->
-            <p>Flip is a timed card memory game. Click the green cards to see what symbol they uncover and try to find
-              the matching symbol underneath the other cards.</p>
-            <p>Uncover two matching symbols at once to eliminate them from the game.</p>
-            <p>Eliminate all cards as fast as you can to win the game. Have fun FLIPing!</p>
+      <div class="card active twist">
+        <div class="flipper">
+          <div class="b f">
+            <div class="c2">L</div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="flipper">
-        <div class="f c4">P</div>
-        <div class="b contentbox levels">
-          <a href="javascript:;" data-level="8" class="play">Casual</a>
-          <a href="javascript:;" data-level="18" class="play">Medium</a>
-          <a href="javascript:;" data-level="32" class="play">Hard</a>
+      <div class="card left">
+        <div class="flipper">
+          <div class="f c3">I</div>
+          <div class="b contentbox instructions">
+            <div class="padded">
+              <h2>Instructions</h2>
+              <p>
+                Justine, Flip is a timed card memory game. Click the green cards
+                to see what symbol they uncover and try to find the matching
+                symbol underneath the other cards.
+              </p>
+              <p>
+                Uncover two matching symbols at once to eliminate them from the
+                game. I hope your tiny brain grasps.
+              </p>
+              <p>
+                Eliminate all cards as fast as you can to win the game. Have fun
+                FLIPing!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="card">
+        <div class="flipper">
+          <div class="f c4">P</div>
+          <div class="b contentbox levels">
+            <a href="javascript:;" data-level="8" class="play">Casual</a>
+            <a href="javascript:;" data-level="18" class="play">Medium</a>
+            <a href="javascript:;" data-level="32" class="play">Hard</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="info">Psst!!!, Tap "I" if you wanna get tought.</p>
+      <div class="ntf face">
+        <img src="./tr/IMG_20231029_121158.png" alt="the pic" />
+        <p>HAH,HAAAAA</p>
+      </div>
+      <div class="ntf2 horse">
+        <img src="./tr/Screenshot (51).png" alt="the pic" />
+        <p>HAH,HAAAAA</p>
+      </div>
     </div>
+    <!-- partial -->
 
-    <p class="info">Psst!!!, Tap "I" if you wanna get tought.</p>
-  </div>
-  <!-- partial -->
+    <!-- notification area -->
 
-  <script src="./jquery.min.js"></script>
-  <script src="./script.js"></script>
-
-</body>
-
+    <script src="./jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => {
+            console.log(
+              "ServiceWorker registration successful with scope: ",
+              registration.scope
+            );
+          })
+          .catch((error) => {
+            console.log("ServiceWorker registration failed: ", error);
+          });
+      }
+    </script>
+  </body>
 </html>
